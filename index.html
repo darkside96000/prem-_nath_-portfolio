@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My-Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo"> <img  class="aa"  src="./assets/logo.jpg" alt="logo" height="50vh" width="100%" /></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Prem Nath </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/prem.jpeg" alt="Prem profile picture"  style="border-radius: 50%; width:70%;" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Prem Nath</h1>
+        <p class="section__text__p2">3D Artist</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-1"
+            onclick="window.open('./assets/res.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-2"
+          onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik00LjIsMjIuNWgxMy40OGwtMi43OTYtNC44MDlIMC4wMDFMMCwxNy42OWwyLjAzMSwzLjQ4M0MyLjQzMiwyMS45NjEsMy4yNDksMjIuNSw0LjIsMjIuNXoiLz48cG9seWdvbiBwb2ludHM9IjEyLjg5NCAxNC4yNzMgNy40MzkgNC44OTkgMS45ODQgMTQuMjczIi8+PHBhdGggZD0iTTIzLjUxMSwxOS4xNzRjMC4wOS0wLjE1LDAuOTkxLTEuMzkyLDAuMDk1LTIuNzd2MC4wMDFMMTUuNzU2LDIuNzhDMTUuMzUsMi4wMjEsMTQuNTQyLDEuNSwxMy42MTIsMS41SDkuNDM2bDEyLjE1MywyMC45NzlMMjMuNTExLDE5LjE3NHoiLz48L3N2Zz4="
+            alt="My artstation profile"
+            class="icon"
+            onclick="location.href='https://www.artstation.com/premnath74'"
+          />
+          <img
+            src="data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03Mi42NTggNTIuOTEyYzcuMTg4LTguMjY1IDE1LjMxOC0xMi40NTcgMjUuNTk3LTExLjk1MSAxNi43MjMuODIyIDI4LjQ5MyAxMi40NjQgMjkuMzM5IDMwLjYzOS43NDMgMTYuMDA4LjIxNiAzMi4wNzIuMzMgNDguMTA4LjAyOCAzLjg0OC0xLjc3NCA1LjI4Ni01LjQ2NyA1LjE5My00Ljk0Ny0uMTI1LTkuOTEyLS4yMzktMTQuODQ3LjA0OS00Ljg5Ni4yODYtNi43NTgtMS42NzktNi42NzQtNi41NDIuMTkzLTEwLjg4Ny4wNzQtMjEuNzgyLjA1My0zMi42NzMtLjAwNy0yLjk2OC4wMy01Ljk1LS4yMDItOC45MDQtLjcxNS05LjE0My02LjA4LTE0LjY2MS0xNC4wMzQtMTQuNTk5LTguMTc1LjA2My0xNC43ODkgNi42MzMtMTQuOTMzIDE1LjM3NC0uMjExIDEyLjg2OC0uMDg0IDI1Ljc0MS0uMTExIDM4LjYxMi0uMDE5IDguNjE4LS4wMjYgOC42MTgtOC41MzUgOC42NzQtMTguNC4xMTgtMTguMzkzLjExOC0xOC40LTE4LjI4Ni0uMDA3LTE4LjgxMS4xMy0zNy42MjctLjE0NC01Ni40MzQtLjA3OS01LjQ0NiAxLjc0Mi03LjYyNyA3LjE3Mi03LjExOCAzLjE0LjI5NSA2LjMzMS4wMzMgOS41MDEuMDQ2QzcwLjc2MSA0My4xNDIgNzAuNzYxIDQzLjE0NyA3Mi42NTggNTIuOTEyek0xLjkyMSA4My42NTRjMC0xMS4yODIuMjA3LTIyLjU2OS0uMDkxLTMzLjg0Mi0uMTM3LTUuMjcyIDEuODc2LTcuMDk3IDYuOTU4LTYuNzg0IDQuOTMuMzAyIDkuODk2LjE3IDE0Ljg0LjA2NSAzLjcxNC0uMDc3IDUuMzkzIDEuNDM1IDUuMzc5IDUuMjctLjA4OCAyMy43NTEtLjEgNDcuNDk5LS4wNTQgNzEuMjUuMDA3IDMuODAyLTEuNjM3IDUuMzY5LTUuMzc2IDUuMjktNS4zNDEtLjExNC0xMC42OTItLjE1Ni0xNi4wMjkuMDIxLTQuMDk3LjEzNy01LjYzNi0xLjYxNC01LjU5Mi01LjY0Ni4xMy0xMS44NzQuMDQ2LTIzLjc1MS4wNDYtMzUuNjI1QzEuOTc3IDgzLjY1NCAxLjk0OSA4My42NTQgMS45MjEgODMuNjU0ek0xNS4xODIgMzEuMzE5QzYuNDk0IDMxLjI4Mi4wNTkgMjUuMjk5IDAgMTcuMjAzLS4wNiA5LjI0NSA2LjU4MiAzLjAyOSAxNS4xNDcgMy4wMjNjOS4zMi0uMDA1IDE1LjYzMiA1LjczOSAxNS41OTUgMTQuMTlDMzAuNzAyIDI1LjgxOSAyNC41OTIgMzEuMzU2IDE1LjE4MiAzMS4zMTl6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="
+            alt="My Linkdin profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/prem-nath-0585b52b0'"
+          />
+          <img
+            src="data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOS4yIDE5LjIiPjxwYXRoIGQ9Ik0xMy40OTggNi42NTFhMS42NTYgMS42NTYgMCAwIDAtLjk1LS45NDkgMi43NjYgMi43NjYgMCAwIDAtLjkyOC0uMTcyYy0uNTI3LS4wMjQtLjY4NS0uMDMtMi4wMi0uMDNzLTEuNDkzLjAwNi0yLjAyLjAzYTIuNzY2IDIuNzY2IDAgMCAwLS45MjkuMTcyIDEuNjU2IDEuNjU2IDAgMCAwLS45NDkuOTUgMi43NjYgMi43NjYgMCAwIDAtLjE3Mi45MjhjLS4wMjQuNTI3LS4wMy42ODUtLjAzIDIuMDJzLjAwNiAxLjQ5My4wMyAyLjAyYTIuNzY2IDIuNzY2IDAgMCAwIC4xNzIuOTI5IDEuNjU2IDEuNjU2IDAgMCAwIC45NS45NDkgMi43NjYgMi43NjYgMCAwIDAgLjkyOC4xNzJjLjUyNy4wMjQuNjg1LjAzIDIuMDIuMDNzMS40OTMtLjAwNiAyLjAyLS4wM2EyLjc2NiAyLjc2NiAwIDAgMCAuOTI5LS4xNzIgMS42NTYgMS42NTYgMCAwIDAgLjk0OS0uOTUgMi43NjYgMi43NjYgMCAwIDAgLjE3Mi0uOTI4Yy4wMjQtLjUyNy4wMy0uNjg1LjAzLTIuMDJzLS4wMDYtMS40OTMtLjAzLTIuMDJhMi43NjYgMi43NjYgMCAwIDAtLjE3Mi0uOTI5ek05LjYgMTIuMTY4QTIuNTY4IDIuNTY4IDAgMSAxIDEyLjE2OCA5LjYgMi41NjggMi41NjggMCAwIDEgOS42IDEyLjE2OHptMi42NjktNC42MzdhLjYuNiAwIDEgMSAuNi0uNi42LjYgMCAwIDEtLjYuNnoiLz48Y2lyY2xlIGN4PSI5LjYiIGN5PSI5LjYiIHI9IjEuNjY3Ii8+PHBhdGggZD0iTTkuNiAwYTkuNiA5LjYgMCAxIDAgOS42IDkuNkE5LjYgOS42IDAgMCAwIDkuNiAwem00Ljk3IDExLjY2MmEzLjY3IDMuNjcgMCAwIDEtLjIzMyAxLjIxMyAyLjU1NiAyLjU1NiAwIDAgMS0xLjQ2MiAxLjQ2MiAzLjY3IDMuNjcgMCAwIDEtMS4yMTMuMjMzYy0uNTM0LjAyNC0uNzA0LjAzLTIuMDYyLjAzcy0xLjUyOC0uMDA2LTIuMDYyLS4wM2EzLjY3IDMuNjcgMCAwIDEtMS4yMTMtLjIzMyAyLjU1NiAyLjU1NiAwIDAgMS0xLjQ2Mi0xLjQ2MiAzLjY3IDMuNjcgMCAwIDEtLjIzMy0xLjIxM2MtLjAyNC0uNTM0LS4wMy0uNzA0LS4wMy0yLjA2MnMuMDA2LTEuNTI4LjAzLTIuMDYyYTMuNjcgMy42NyAwIDAgMSAuMjMzLTEuMjEzIDIuNTU2IDIuNTU2IDAgMCAxIDEuNDYyLTEuNDYyIDMuNjcgMy42NyAwIDAgMSAxLjIxMy0uMjMzYy41MzQtLjAyNC43MDQtLjAzIDIuMDYyLS4wM3MxLjUyOC4wMDYgMi4wNjIuMDNhMy42NyAzLjY3IDAgMCAxIDEuMjEzLjIzMyAyLjU1NiAyLjU1NiAwIDAgMSAxLjQ2MiAxLjQ2MiAzLjY3IDMuNjcgMCAwIDEgLjIzMyAxLjIxM2MuMDI0LjUzNC4wMy43MDQuMDMgMi4wNjJzLS4wMDYgMS41MjgtLjAzIDIuMDYyeiIvPjwvc3ZnPg=="
+            alt="My insta id"
+            class="icon"
+            onclick="location.href='https://www.instagram.com/visualfx_96?igsh=OGQ5ZDc2ODk2ZA=='"
+          />
+        </div>
+
+      <button
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/prem.jpeg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Freelancer<br />3D Artist</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Science, MultiMedia<br />Chandigarh Group of CollegesJhanjeri Mohali</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              3D artists create three-dimensional creations, including models, animation, and visual effects, which are used in creative projects, including films, video games, and advertising campaigns. They create special effects to match specific briefs utilizing a combination of hand drawing techniques and computer software. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers" >
+          <div class="details-container" >
+            <h2 class="experience-sub-title">3D Artist</h2>
+            <div class="article-container" >
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>VFX Artist</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CGI Artist</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>3D Modeling</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>3D Motion designer</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>3D logo Design</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Brand Design</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+              src="./assets/img1.png"
+              alt="Project 2"
+              class="project-img"
+            />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.artstation.com/artwork/RyoAme'"
+              >
+                ArtStation
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/p/C8R0BWtSqf3/?igsh=MzRlODBiNWFlZA=='"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./img2.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.artstation.com/artwork/RyoAme'"
+              >
+                ArtStation
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/reel/C2PyrQBx-Rh/?igsh=MzRlODBiNWFlZA=='"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./img3.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.artstation.com/artwork/RyoAme'"
+              >
+                ArtStation
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/reel/C3rf4WqJXW0/?igsh=MTc4MmM1YmI2Ng=='"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./pro 4.jpg"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Four</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.artstation.com/artwork/RyoAme'"
+              >
+                ArtStation
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.instagram.com/reel/C-fazDYyh4y/?igsh=MTc4MmM1YmI2Ng=='"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">prem.nath3096@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/prem-nath-0585b52b0">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Darkside96000. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
